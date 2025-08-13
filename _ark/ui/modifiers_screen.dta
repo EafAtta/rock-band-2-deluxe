@@ -29,7 +29,7 @@
             {set $mod_first_entry TRUE}
         }
         {if $mod_os_entered
-            OS_MOD_OPEN_ANIM
+            OS_OPTIONS_OPEN_ANIM
         }
         )
     (exit
@@ -136,7 +136,6 @@
             {if_else $mod_os_entered
                 {if_else {== $action kAction_Cancel}
                     {do
-                        {ui goto_screen overshell_main_screen}
                         {synth play button_toggle}
                         {ui pop_screen}
                         {set $mod_os_entered FALSE}
